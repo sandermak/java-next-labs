@@ -1,0 +1,3 @@
+module logger.jdk {
+
+}
