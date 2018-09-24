@@ -12,7 +12,3 @@ Goal of this exercise is to learn about module structure, module descriptor synt
 ## 02. services
 
 Goal of this exercise is to learn how services can be used to decouple modules through a shared interface. Further instructions are in the `02-services-begin` directory.
-
-## 03. automatic-modules
-
-Goal of this exercise is to learn how to use automatic modules. Automatic modules are non-modular JAR files (meaning they do not have a module descriptor) that are put on the module path rather than classpath.

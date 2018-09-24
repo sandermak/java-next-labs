@@ -15,5 +15,8 @@ If you're using an IDE you should configure this flag for the Java compiler and 
 
 ## 01. sync-http
 
+Perform a simple, synchronous HTTP GET call with the new HttpClient API.
 
 ## 02. async-http
+
+Perform an asynchronous HTTP/2 GET call with the new HttpClient API.

@@ -2,13 +2,13 @@
 
 ## 01. Optional::ifPresentOrElse
 
-Open `src/whatsnew/langandlib/optional//OptionalIfPresentOrElse.java` and look at the code.
+Open `src/whatsnew/langandlib/optional/OptionalIfPresentOrElse.java` and look at the code.
 Use `Optional::ifPresentOrElse` (introduced in Java 9) to achieve the same effect as in the preceding `if-else` statement.
 
 ## 02. Optional::or
 
 Open `src/whatsnew/langandlib/optional/OptionalOr.java` and look at the code.
-Use `Optional::or` (introduced in Java 9) to implement the cascading alternatives that are implemented in the existing code in a nicer way.
+Use `Optional::or` (introduced in Java 9) to implement the cascading alternatives that are implemented in the existing code, but now in a nicer way.
 Notice you'll end up with an `Optional<Book>` in `bestBook`, whereas the original solution (`bestBookBefore`) will blow up with an exception should the `localFallback` also be empty!
 
 ## 03. Option::stream and Stream::flatMap
@@ -19,7 +19,7 @@ Combining this with `Stream::flatMap`, which takes multiple streams and flattens
 
 This exercise can be implemented using `Optional::stream` combined with `Stream::flatMap` and some other `Stream` methods.
 The goal is to turn the stream of `Book`s into a set of author names.
-For every book, find the first author (use `Stream::findFirst`), and collect all these first authors into a `Set`.
+For every book, find the first author (use `Stream::findFirst`), and collect all these first authors into a single `Set`.
 
 
 ## 04. Stream::takeWhile/dropWhile

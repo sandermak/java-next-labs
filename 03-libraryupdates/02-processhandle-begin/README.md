@@ -22,7 +22,8 @@ You can use the `printInfo` method to print a nice line for each `ProcessHandle.
 
 Instead of listing all processes, try to find a specific process by (partial) name.
 Then, use `destroy` to kill it.
-But, before killing `destroy`, attach a callback on the `ProcessHandle` through its `onExit` method.
+There's also `destroyForcibly`, if you really want...
+But, before killing the process, attach a callback on the obtained `ProcessHandle` through its `onExit` method.
 It returns a `CompletableFuture` (that we saw before in the HttpClient exercises) that you can attach callbacks on.
 
 TIP: remember that you should `join` a `CompletableFuture` if you want the program to wait for the completion (and execution of the callback).

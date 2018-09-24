@@ -8,11 +8,11 @@ There are two service provider modules that must provide `Logging` implementatio
 
 ## Step 1
 Ensure that the `logger.client` module compiles, it currently has a compile error because of the import of `Logging`.
-You can fix this by defining the `logger.client` and `logger.api` modules correctly.
+You can fix this by defining the `logger.client` and `logger.api` module descriptors correctly.
 If you did this correctly, compiling and running the `logger.client` will succeed (even though it doesn't do anything yet).
 
 ## Step 2
-Add a appropriate `ServiceLoader` invocation to the `main` method, that obtains all services that implement `Logging`.
+Add an appropriate `ServiceLoader` invocation to the `main` method, that obtains all services that implement `Logging`.
 For each instance returned by the `ServiceLoader`, invoke the `log` method with a message.
 Use the [ServiceLoader JavaDoc](https://docs.oracle.com/javase/10/docs/api/java/util/ServiceLoader.html) if necessary.
 The `logging.client` module should still compile and run, but it still doesn't do anything, because there are no service providers yet.
@@ -20,7 +20,7 @@ Let's fix that.
 
 ## Step 3
 Look at the `logger.plain` module. It implements the `Logging` interface in a straightforward manner.
-Expose this implementations as service by setting up the module descriptor.
+Expose this implementation as service by setting up the module descriptor.
 Then, compile the `logger.client` and `logger.plain` modules together.
 You have to specify the `logger.plain` module for compilation explicitly because the compiler only picks up additional modules through `requires` relations, not because of service relations.
 

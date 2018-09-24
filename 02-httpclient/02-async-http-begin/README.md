@@ -3,7 +3,7 @@
 In this exercise we're going to do an asynchronous call to `https://www.google.com` using HTTP/2.
 
 ## Step 1
-Create an `HttpClient` that is configured to prefer HTTP/2 calls.
+Create an `HttpClient` that is configured to prefer HTTP/2 calls using the builder API.
 
 ## Step 2
 Create an `HttpRequest` to `https://www.google.com`.
