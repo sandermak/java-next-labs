@@ -6,6 +6,8 @@ All module descriptors are currently empty, it's up to you to define them correc
 The goal is to have a module `client` that we can run, that uses the `Logging` interface as defined in the `logger.api` module.
 There are two service provider modules that must provide `Logging` implementations through the services mechanism.
 
+Use `./compilerun.sh` to compile and run the code. During the steps you'll need to expand this script with new modules to compile.
+
 ## Step 1
 Ensure that the `logger.client` module compiles, it currently has a compile error because of the import of `Logging`.
 You can fix this by defining the `logger.client` and `logger.api` module descriptors correctly.
@@ -21,7 +23,7 @@ Let's fix that.
 ## Step 3
 Look at the `logger.plain` module. It implements the `Logging` interface in a straightforward manner.
 Expose this implementation as service by setting up the module descriptor.
-Then, compile the `logger.client` and `logger.plain` modules together.
+Then, compile the `logger.client` and `logger.plain` modules together (update the `compilerun.sh` script).
 You have to specify the `logger.plain` module for compilation explicitly because the compiler only picks up additional modules through `requires` relations, not because of service relations.
 
 Compilation now succeeds, but at runtime you will most likely see a `ServiceConfigurationError`.
@@ -37,7 +39,7 @@ Therefore, to setup the module descriptor of this service provider, you will als
 Remember, you can use the Java 9+ JavaDoc to find out in which (JDK) module an API lives.
 Expose the `JdkLogging` implementation just as you did with the `PlainLogging`.
 
-Compiling and running the application now shows the output of both `Logging` implementations.
+Compiling and running the application (don't forget to add `logger.jdk` to the `compilerun.sh` script) now shows the output of both `Logging` implementations.
 
 ## Bonus Step
 Look at the `stream` method on `ServiceLoader`.
