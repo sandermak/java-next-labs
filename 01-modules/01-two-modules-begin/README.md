@@ -23,7 +23,7 @@ java --module-path <destdir> -m <modulename>/<mainclass>
 ```
 
 Note that the the main class should be fully qualified (including the package name).
-Also, `--module-path` can be shortened to `-m`.
+Also, `--module-path` can be shortened to `-mp`.
 
 ## Step 4
 Next, add another module called `secondmodule`.
