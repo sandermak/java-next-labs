@@ -2,6 +2,8 @@
 
 In this exercise we're going to perform a GET call using the least amount of configuration, using default settings of the `HttpClient`.
 
+You can either use the `compilerun.sh` script to run the application from the command-line, or you can configure your favorite IDE for this project. In that case, remember to add the `--add-modules jdk.incubator.httpclient` to the compiler (only necessary in IntelliJ) and run configuration (in both IntelliJ and Eclipse).
+
 Tip: try to use `var` wherever it makes sense.
 
 ## Step 1
