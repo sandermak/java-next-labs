@@ -1,8 +1,8 @@
 package whatsnew.httpclient;
 
-import jdk.incubator.http.HttpClient;
-import jdk.incubator.http.HttpRequest;
-import jdk.incubator.http.HttpResponse;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import java.net.URI;
 import java.time.Duration;
@@ -20,12 +20,12 @@ public class AsyncHttpBuilderExample {
         HttpClient client = builder.build();
 
         HttpRequest request = HttpRequest.newBuilder(URI.create("https://www.google.com"))
-                .header("User-Agent", "Java 10")
+                .header("User-Agent", "Java 11")
                 .GET()
                 .build();
 
         CompletableFuture<HttpResponse<String>> response =
-          client.sendAsync(request, HttpResponse.BodyHandler.asString());
+          client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
 
         response.thenAccept(r -> {
             System.out.println("Version: " + r.version());

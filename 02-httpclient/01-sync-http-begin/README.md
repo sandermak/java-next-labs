@@ -2,16 +2,16 @@
 
 In this exercise we're going to perform a GET call using the least amount of configuration, using default settings of the `HttpClient`.
 
-You can either use the `compilerun.sh` script to run the application from the command-line, or you can configure your favorite IDE for this project. In that case, remember to add the `--add-modules jdk.incubator.httpclient` to the compiler (only necessary in IntelliJ) and run configuration (in both IntelliJ and Eclipse).
+You can either use the `compilerun.sh` script to run the application from the command-line, or you can configure your favorite IDE for this project. In that case, remember to select JDK 11 as the runtime platform, and set the language level for your project to Java 11.
 
 Tip: try to use `var` wherever it makes sense.
 
 ## Step 1
-Create a `HttpClient` instance (use the simplest possible way) and an `HttpRequest` that points to `https://www.ns.nl` (as a GET request).
+Create a `HttpClient` instance (use the simplest possible way) and an `HttpRequest` that points to `https://www.google.com` (as a GET request).
 
 ## Step 2
 Perform the request using the `HttpClient` instance.
-Look at the various pre-defined `BodyHandler`s as provided by the `BodyHandler` class.
+Look at the various pre-defined `BodyHandler`s as provided by the `HttpRequest.BodyHandlers` class.
 
 ## Step 3
 Print the headers of the response *if it is succesful*.

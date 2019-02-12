@@ -1,8 +1,8 @@
 package whatsnew.httpclient;
 
-import jdk.incubator.http.HttpClient;
-import jdk.incubator.http.HttpRequest;
-import jdk.incubator.http.HttpResponse;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 import java.net.URI;
 import java.time.Duration;
@@ -14,6 +14,6 @@ public class AsyncHttpBuilderExample {
     public static void main(String... args) throws Exception {
         HttpClient.Builder builder = HttpClient.newBuilder();
 
-        
+
     }
 }
