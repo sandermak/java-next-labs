@@ -1,10 +1,10 @@
-# The Java Module System
+# The Java Module System: Services
 
 We have four pre-defined modules in this exercise.
 All module descriptors are currently empty, it's up to you to define them correctly.
 
 The goal is to have a module `client` that we can run, that uses the `Logging` interface as defined in the `logger.api` module.
-There are two service provider modules that must provide `Logging` implementations through the services mechanism.
+There are two service provider modules that must provide `Logging` implementations through the [services](https://openjdk.java.net/projects/jigsaw/quick-start#services) mechanism.
 
 Use `./compilerun.sh` to compile and run the code. During the steps you'll need to expand this script with new modules to compile.
 
@@ -16,17 +16,19 @@ If you did this correctly, compiling and running the `logger.client` will succee
 ## Step 2
 Add an appropriate `ServiceLoader` invocation to the `main` method, that obtains all services that implement `Logging`.
 For each instance returned by the `ServiceLoader`, invoke the `log` method with a message.
-Use the [ServiceLoader JavaDoc](https://docs.oracle.com/javase/10/docs/api/java/util/ServiceLoader.html) if necessary.
+Use the [ServiceLoader JavaDoc](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ServiceLoader.html) if necessary.
+Also take care to update the module descriptor of the `logger.client` module so it reflects the service use.
 The `logging.client` module should still compile and run, but it still doesn't do anything, because there are no service providers yet.
 Let's fix that.
 
 ## Step 3
 Look at the `logger.plain` module. It implements the `Logging` interface in a straightforward manner.
-Expose this implementation as service by setting up the module descriptor.
+Expose this implementation as service by setting up the module descriptor for the `logger.plain` module.
 Then, compile the `logger.client` and `logger.plain` modules together (update the `compilerun.sh` script).
 You have to specify the `logger.plain` module for compilation explicitly because the compiler only picks up additional modules through `requires` relations, not because of service relations.
 
-Compilation now succeeds, but at runtime you will most likely see a `ServiceConfigurationError`.
+Compilation now succeeds.
+If you still see a `ServiceConfigurationError` error at runtime, take care to update the `logger.client` module descriptor to reflect the service use.
 The `logger.client` module descriptor should express that it wants to use services implementing `Logging`.
 When you fix this, the application should compile and run, and you should see your message appear in the output.
 

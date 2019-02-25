@@ -1,4 +1,4 @@
-# 01-two-modules
+# The Java Module System: Basics
 
 ## Step 1
 Create a module called `firstmodule` in the `src` folder.
