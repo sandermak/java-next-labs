@@ -6,6 +6,7 @@ Make sure Java 11 is installed: https://adoptopenjdk.net/releases.html?variant=o
 You can find the JavaDoc for Java 11 at https://docs.oracle.com/en/java/javase/11/docs/api/index.html
 
 Using an IDE such as [Eclipse](https://www.eclipse.org/downloads/) or [IntelliJ](https://www.jetbrains.com/idea/download/) is possible, but not required.
+Each exercise (except the ones under `01-modules`) has a `pom.xml`, so you can easily import the exercise in for example IntelliJ.
 An IDE sometimes obscures what's really happening, especially when learning about Java modules where new compilation and JVM flags are introduced.
 
 Each individual directory contains further instructions for the exercises.

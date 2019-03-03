@@ -3,7 +3,7 @@
 The biggest new feature in Java 9 is the Java module system.
 These exercises explore the basics of the module system.
 Doing these exercises outside of an IDE is recommended.
-Use your favorite text editor (with Java syntax highlighting) and use the `javac` and `java` commands from the command-line directly.
+Use your favorite text editor (with Java syntax highlighting, for example Atom or VS Code) and use the `javac` and `java` commands from the command-line directly as described in the excercises.
 
 ## 01. two-modules
 

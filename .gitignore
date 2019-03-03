@@ -1,3 +1,6 @@
+.idea/
+*.iml
+target/
 mods/
 out/
 .DS_STORE
