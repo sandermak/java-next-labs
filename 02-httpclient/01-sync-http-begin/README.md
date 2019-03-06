@@ -2,7 +2,12 @@
 
 In this exercise we're going to perform a GET call using the least amount of configuration, using default settings of the `HttpClient`.
 
-You can either use the `compilerun.sh` script to run the application from the command-line, or you can configure your favorite IDE for this project. In that case, remember to select JDK 11 as the runtime platform, and set the language level for your project to Java 11.
+You can either use the `compilerun.sh` script to run the application from the command-line, or use Maven to compile (`mvn compile`) and run (`mvn exec:java`) the example.
+
+You can also import the project into an IDE.
+Since it is a Maven project, most IDEs should automatically set the right configuration.
+Alternatively, you can configure your favorite IDE for this project manually.
+In that case, remember to select JDK 11 as the runtime platform, and set the language level for your project to Java 11.
 
 Tip: try to use `var` wherever it makes sense.
 
@@ -21,7 +26,7 @@ Otherwise, print the unsuccessful status code and the body of the response (it m
 Tip: you can trigger the failure path by performing a request to `http://httpstat.us/400` instead.    
 
 ## Bonus step
-Change the request URL to `http://ns.nl` (http instead of https) and run the code again.
+Change the request URL to `http://google.com` (drop the `www`) and run the code again.
 You'll see that a 301 (redirect) status code is returned.
 Try to configure the `HttpClient` so that it transparently follows redirects, and delivers a 200 OK response again.
-You'll need the `HttpClient.Builder` for this.
+You'll need the `HttpClient.Builder` for this to create a correctly configured `HttpClient`.

@@ -6,7 +6,7 @@ All module descriptors are currently empty, it's up to you to define them correc
 The goal is to have a module `client` that we can run, that uses the `Logging` interface as defined in the `logger.api` module.
 There are two service provider modules that must provide `Logging` implementations through the [services](https://openjdk.java.net/projects/jigsaw/quick-start#services) mechanism.
 
-Use `./compilerun.sh` to compile and run the code. During the steps you'll need to expand this script with new modules to compile. On Windows you can use Cygwin or the Linux Subsystem for Windows, or alternatively just copy the individual commands from the script to the command line, the scripts are fairly small so it's not too bad. 
+Use `./compilerun.sh` to compile and run the code. During the steps you'll need to expand this script with new modules to compile. On Windows you can use Cygwin or the Linux Subsystem for Windows, or alternatively just copy the individual commands from the script to the command line, the scripts are fairly small so it's not too bad.
 
 ## Step 1
 Ensure that the `logger.client` module compiles, it currently has a compile error because of the import of `Logging`.
@@ -24,7 +24,9 @@ Let's fix that.
 ## Step 3
 Look at the `logger.plain` module. It implements the `Logging` interface in a straightforward manner.
 Expose this implementation as service by setting up the module descriptor for the `logger.plain` module.
-Then, compile the `logger.client` and `logger.plain` modules together (update the `compilerun.sh` script).
+Then, compile the `logger.client` and `logger.plain` modules together.
+Update the `compilerun.sh` script to also compile this additional module.
+The `-m` flag takes a comma-separated list of modules to compile.
 You have to specify the `logger.plain` module for compilation explicitly because the compiler only picks up additional modules through `requires` relations, not because of service relations.
 
 Compilation now succeeds.

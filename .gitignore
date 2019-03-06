@@ -4,3 +4,7 @@ target/
 mods/
 out/
 .DS_STORE
+.classpath
+.settings/
+.project
+bin/

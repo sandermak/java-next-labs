@@ -1,15 +1,16 @@
 # The Java Module System: Basics
 
 ## Step 1
-Create a module called `firstmodule` in the `src` folder.
-You can put the sources for this first module in a `firstmodule` directory.
+Create a module directory called `firstmodule` in the `src` folder.
+You can put the sources for the first module in this `firstmodule` directory.
 Remember, a module is created by adding a module descriptor (`module-info.java`) to the root of the source tree for the module.
 
 ## Step 2
-Then, create a class with a `main` method.
+Then, create a class with a `main` method in the first module.
 This class must be in a package (modules cannot contain code outside packages).
 Try compiling the module.
-On https://docs.oracle.com/javase/10/tools/javac.htm you can find all the new flags that have been added for handling modules during compilation.
+On https://docs.oracle.com/en/java/javase/11/tools/javac.html you can find all the new flags that have been added for handling modules during compilation.
+
 Compiling a single module can be done without any special new flags, but try using the `--module-source-path` flag instead, because we will add a second module next.
 You'll see that when using this flag, you need to define a destination/output directory as well using `-d`.
 Also look at the `--module` (or `-m`) flag of `javac`, since it allows you to define just a module name for compilation, rather than having to list all source files as input to the compiler.
@@ -35,4 +36,4 @@ What else needs to happen for the code to compile? (Think of strong encapsulatio
 ## Step 5
 Try running the application with the same command you used before to run the single module.
 Note that the module descriptor is used at runtime to check all dependencies before starting the application.
-If you remove `secondmodule` from the destination directory, and try to run the app using the same command, you will get an explanation of why the app cannot be started.
+If you remove `secondmodule` from the destination (`mods`) directory, and try to run the app using the same command (but without recompiling first), you will get an explanation of why the app cannot be started from the module system.
