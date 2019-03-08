@@ -23,7 +23,8 @@ The syntax for running a compiled module is as follows:
 java --module-path <destdir> -m <modulename>/<mainclass>
 ```
 
-Note that the the main class should be fully qualified (including the package name).
+Note that the the main class should be a fully qualified classname (including the package name).
+An example of a fully qualified classname is `com.javamodularity.module1.Main`.
 Also, `--module-path` can be shortened to `-p`.
 
 ## Step 4
