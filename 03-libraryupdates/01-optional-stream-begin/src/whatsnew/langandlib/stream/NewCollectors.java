@@ -13,7 +13,7 @@ public class NewCollectors {
     public static void main(String... args) {
         Stream<Book> books = Book.getBooks();
 
-        // Collect all books costing more than 10, grouped by author(s)
+        // Group books by author(s), with for each entry in the resulting Map a collection of the authors' books costing more than 10
         // Hint: take a look at Collectors::groupingBy and Collectors::filtering
         Map<Set<String>, Set<Book>> booksByAuthors =
           books.collect(
@@ -22,7 +22,7 @@ public class NewCollectors {
 
           );
 
-        // Expected output: {[Richard Warburton]=[Book{title='Java 8 Lambdas', price=33.99}], [Paul Bakker, Sander Mak]=[Book{title='Java 9 Modularity', price=33.99}], [Martin Klepmann]=[Book{title='Designing Data-Intensive Applications', price=38.99}]}
+        // Expected output: {[Richard Warburton]=[Book{title='Java 8 Lambdas', price=33.99}], [Anonymous]=[], [Paul Bakker, Sander Mak]=[Book{title='Java 9 Modularity', price=33.99}], [Martin Klepmann]=[Book{title='Designing Data-Intensive Applications', price=38.99}]}
         System.out.println(booksByAuthors);
 
         books = Book.getBooks();
@@ -35,7 +35,7 @@ public class NewCollectors {
 
           );
 
-        // Expected output: {9.99=[Richard Warburton], 33.99=[Richard Warburton, Paul Bakker, Sander Mak], 38.99=[Martin Klepmann]}
+        // Expected output: {9.99=[Anonymous], 33.99=[Richard Warburton, Paul Bakker, Sander Mak], 38.99=[Martin Klepmann]}
         System.out.println(authorsSellingForPrice);
     }
 }

@@ -5,6 +5,7 @@ import whatsnew.langandlib.Book;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class OptionalOr {
     public static void main(String... args) {
@@ -30,6 +31,6 @@ public class OptionalOr {
     }
 
     static Optional<Book> getExternalOffer() {
-        return Optional.of(new Book("External Book", Set.of(), 11.99));
+        return Optional.of(new Book("External Book", new TreeSet<>(), 11.99));
     }
 }

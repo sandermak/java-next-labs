@@ -13,7 +13,7 @@ public class NewCollectors {
     public static void main(String... args) {
         Stream<Book> books = Book.getBooks();
 
-        // Collect all books costing more than 10, grouped by author(s)
+        // Group books by author(s), with for each entry in the resulting Map a collection of the authors' books costing more than 10
         // Hint: take a look at Collectors::groupingBy and Collectors::filtering
         Map<Set<String>, Set<Book>> booksByAuthors =
           books.collect(
