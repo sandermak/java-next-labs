@@ -11,7 +11,7 @@ Open `src/whatsnew/langandlib/optional/OptionalOr.java` and look at the code.
 Use `Optional::or` (introduced in Java 9) to implement the cascading alternatives that are implemented in the existing code, but now in a nicer way.
 Notice you'll end up with an `Optional<Book>` in `bestBook`, whereas the original solution (`bestBookBefore`) will blow up with an exception should the `localFallback` also be empty!
 
-## 03. Option::stream and Stream::flatMap
+## 03. Optional::stream and Stream::flatMap
 
 Open `src/whatsnew/langandlib/optional/OptionalStream.java` and look at the code.
 The introduction of `Optional::stream` in Java 9 allows us to turn optionals in to empty or single-valued streams.
