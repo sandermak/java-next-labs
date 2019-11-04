@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>keepingupwithjava</groupId>
-  <artifactId>sync-http-begin</artifactId>
+  <artifactId>01-sync-http-begin</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 

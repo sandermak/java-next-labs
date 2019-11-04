@@ -1,0 +1,15 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>keepingupwithjava</groupId>
+  <artifactId>03-libraryupdates</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>01-optional-stream-begin</module>
+    <module>01-optional-stream-solution</module>
+    <module>02-processhandle-begin</module>
+    <module>02-processhandle-solution</module>
+  </modules>
+</project>

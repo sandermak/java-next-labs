@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>keepingupwithjava</groupId>
-  <artifactId>async-http-begin</artifactId>
+  <artifactId>02-async-http-begin</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 

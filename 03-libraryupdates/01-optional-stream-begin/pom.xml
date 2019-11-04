@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>keepingupwithjava</groupId>
-  <artifactId>optional-stream-begin</artifactId>
+  <artifactId>01-optional-stream-begin</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 

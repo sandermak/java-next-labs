@@ -1,0 +1,15 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>keepingupwithjava</groupId>
+  <artifactId>02-httpclient</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>01-sync-http-begin</module>
+    <module>01-sync-http-solution</module>
+    <module>02-async-http-begin</module>
+    <module>02-async-http-solution</module>
+  </modules>
+</project>

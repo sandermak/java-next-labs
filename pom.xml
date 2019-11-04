@@ -1,0 +1,13 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>keepingupwithjava</groupId>
+  <artifactId>java-next-labs</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>02-httpclient</module>
+    <module>03-libraryupdates</module>
+  </modules>
+</project>
