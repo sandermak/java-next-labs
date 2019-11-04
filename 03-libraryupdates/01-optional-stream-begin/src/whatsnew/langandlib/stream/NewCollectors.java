@@ -22,7 +22,7 @@ public class NewCollectors {
 
           );
 
-        // Expected output: {[Richard Warburton]=[Book{title='Java 8 Lambdas', price=33.99}], [Anonymous]=[], [Paul Bakker, Sander Mak]=[Book{title='Java 9 Modularity', price=33.99}], [Martin Klepmann]=[Book{title='Designing Data-Intensive Applications', price=38.99}]}
+        // Expected output: {[]=[], [Richard Warburton]=[Book{title='Java 8 Lambdas', price=33.99}], [Paul Bakker, Sander Mak]=[Book{title='Java 9 Modularity', price=33.99}], [Anonymous]=[], [Martin Klepmann]=[Book{title='Designing Data-Intensive Applications', price=38.99}]}
         System.out.println(booksByAuthors);
 
         books = Book.getBooks();

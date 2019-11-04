@@ -38,10 +38,11 @@ public class Book {
     }
 
     public static Stream<Book> getBooks() {
-        return Stream.of(new Book("Java 9 Modularity", new TreeSet<>(Set.of("Sander Mak", "Paul Bakker")), 33.99),
+        return Stream.of(new Book("Java 9 Modularity", new TreeSet<>(Set.of("Paul Bakker", "Sander Mak")), 33.99),
                          new Book("Designing Data-Intensive Applications", new TreeSet<>(Set.of("Martin Klepmann")), 38.99),
                          new Book("Java 8 Lambdas", new TreeSet<>(Set.of("Richard Warburton")), 33.99),
-                         new Book("Too cheap", new TreeSet<>(Set.of("Anonymous")), 9.99));
+                         new Book("Too cheap", new TreeSet<>(Set.of("Anonymous")), 9.99),
+                         new Book("Auto-generated", new TreeSet<>(), 9.99));
     }
 
     public static Book getBook() {

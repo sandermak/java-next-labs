@@ -17,6 +17,7 @@ public class OptionalStream {
 
         Set<String> firstAuthors = null;
 
+        // Expected output (order in firstAuthors Set is not important): [Richard Warburton, Paul Bakker, Anonymous, Martin Klepmann]
         System.out.println(firstAuthors);
     }
 }

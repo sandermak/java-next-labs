@@ -17,7 +17,7 @@ public class OptionalStream {
 
         Set<String> firstAuthors = books
                 .map(book -> book.authors.stream().findFirst())
-                .flatMap(optAuthor -> optAuthor.stream())
+                .flatMap(Optional::stream)
                 .collect(Collectors.toSet());
 
         System.out.println(firstAuthors);
